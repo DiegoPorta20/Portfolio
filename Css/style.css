@@ -149,33 +149,6 @@ h4{
     letter-spacing: 2px;
     font-size: 20px;
 }
-.newsletter form{
-    width: 380px;
-    max-width: 100%;
-    position: relative;
-}
-.newsletter form input:first-child{
-    display: inline-block;
-    width: 100%;
-    padding: 14px 130px 14px 15px;
-    border: 2px solid #f9004d;
-    outline: none;
-    border-radius: 30px;
-}
-.newsletter form input:last-child {
-    width: 140px;
-    position: absolute;
-    display: inline-block;
-    border: none;
-    outline: none;
-    padding: 10px 30px; 
-    border-radius: 30px;
-    background: #f9004d;
-    color: #fff;
-    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-    top: 6px;
-    right: 6px;
-}
 .photo{
     position: absolute;
     top: 50%;
@@ -364,10 +337,6 @@ footer{
     color: #fff;
     font-size: 18px;
 }
-.hero .content {
-    height: 50vh;
-    margin-left: 45px;
-}
 .hero_img img{
     width: 600px;
     height: 600px;
@@ -429,29 +398,56 @@ footer{
         display: flex;
         justify-content: end;
     }
-    @media screen and (max-width: 1000px){
-        .tenologies {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .about .container{
-            grid-template-columns: repeat(1, 1fr);
-        }
-        .hero{
-            grid-template-columns: repeat(1, 1fr);
-            height: 100%;
-        }
-        .hero .content{
-            padding-top: 100px;
-        }
-        .hero_img{
-            height: 40vh;
-        }
-        .hero_img img{
-            margin: auto;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-        }
+}
+@media screen and (max-width: 1000px){
+    .tenologies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero{
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+        justify-content: center;
+    }
+    .hero .content{
+        padding-top: 100px;
+        margin: auto;
+        justify-content: center;
+    }
+    .hero_img{
+        height: 100%;
+        grid-template-columns: repeat(1,1fr);
+        padding: 30px 0;
+    }
+    .hero_img img{
+        margin: 25px auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
     }
 }
-
+@media screen and (max-width: 400px){
+    .hero_img img{
+        width: 250px;
+        height: 250px;
+    }
+    .hero .content h1{
+        font-size: 55px;
+    }
+    .hero{
+        width: 100%;
+    }
+    .projects .container .project h5 a{
+        font-size: 13px;
+    }
+    .tenologies .img_personal{
+        width: 110px;
+        height: 110px;
+    }
+    .about .container img{
+        width: 250px;
+        height: 250px;
+    }
+}
