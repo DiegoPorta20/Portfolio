@@ -126,7 +126,7 @@ body {
 }
 
 .menu {
-    display: none;
+    display: none !important;
     font-size: 24px;
     color: var(--text-primary);
     cursor: pointer;
@@ -1136,7 +1136,7 @@ footer {
     }
 
     .menu {
-        display: flex;
+        display: flex !important;
     }
 
     .hero h1 {
