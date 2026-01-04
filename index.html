@@ -1,45 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Diego Porta - Desarrollador Full Stack">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Css/style.css">
     <script src="https://kit.fontawesome.com/ad07fec59d.js" crossorigin="anonymous"></script>
-    <title>Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Diego Porta - Full Stack Developer</title>
 </head>
 <body>
-    <div class="nav">
+    <!-- Fondo 3D con Three.js -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Navegación moderna -->
+    <nav class="nav">
         <div class="container">
-            <h2 class="logo">Portfo<span>lio</span></h2>
+            <h2 class="logo">Diego<span>.dev</span></h2>
             <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About Me</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact">Contact Me</a></li>
+                <li><a href="#Home">Inicio</a></li>
+                <li><a href="#About">Sobre mí</a></li>
+                <li><a href="#Skills">Habilidades</a></li>
+                <li><a href="#Projects">Proyectos</a></li>
+                <li><a href="#Contact">Contacto</a></li>
             </ul>
             <i class="fa-solid fa-bars menu"></i>
-            <a href="#" class="btn">Suscribe</a>
+            <a href="#Contact" class="btn">Contáctame</a>
         </div>
-    </div>
+    </nav>
     <section class="hero" id="Home">
+        <div class="hero-gradient"></div>
         <div class="content">
-            <h4>Hi, my name is</h4>
-            <h1>Diego <span>Porta</span></h1>
-            <h3>I'm a Web Developer</h3>
-            <div class="newsletter">
-                <form action="">
-                    <input type="email" name="email" id="mail" placeholder="Enter your email">
-                    <input type="submit" name="submit" value="Lest Start">
-                </form>
+            <div class="content-wrapper">
+                <div class="greeting">
+                    <span class="wave">👋</span>
+                    <p class="intro-text">Hola, soy</p>
+                </div>
+                <h1 class="glitch" data-text="Diego Porta">Diego <span>Porta</span></h1>
+                <div class="title-container">
+                    <h3 class="typing-effect">Desarrollador Full Stack</h3>
+                </div>
+                <p class="hero-description">
+                    Creando experiencias web innovadoras con tecnologías modernas
+                </p>
+                <div class="hero-buttons">
+                    <a href="#Projects" class="btn btn-primary">
+                        <span>Ver Proyectos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#Contact" class="btn btn-outline">
+                        <span>Contáctame</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/DiegoPorta20" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/diego-alexander-porta-%C3%B1a%C3%B1a-5bb48b237/" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:diegoporta20@hotmail.com" class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="hero_img">
-            <img src="Img/photo.png" alt="" >
+            <div class="image-container">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+                <img src="Img/photo.png" alt="Diego Porta" class="profile-img">
+                <div class="image-bg"></div>
+            </div>
         </div>        
     </section>
     <div class="head-click">
@@ -55,14 +95,56 @@
     </div>
     <section class="about" id="About">
         <div class="container">
-            <div class="text">
-                <h2>About Me</h2>
-                <h5>Developer & Designer</h5>
-                <p>
-                    I am a student of the sixth cycle of the Software Engineering career - Peruvian University of Applied Sciences. I am an enthusiastic person in web and mobile application technologies, with which I have knowledge of Html, Css, Javascript, vue, angular as frontend technologies and C#, Java as backend technologies, in the same way I have knowledge of database with MySql .
-                </p>
+            <div class="section-header">
+                <span class="section-tag">Conóceme</span>
+                <h2 class="section-title">Sobre <span>Mí</span></h2>
             </div>
-            <img src="Img/about.jpg" alt="">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="Img/about.jpg" alt="Diego Porta">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <div class="badge-content">
+                            <h3>3+</h3>
+                            <p>Años de<br>Experiencia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <h3 class="subtitle">Desarrollador Full Stack & Ingeniero de Software</h3>
+                    <p class="description">
+                        Bachiller en Ingeniería de Software con 3 años de experiencia desarrollando aplicaciones web y móviles escalables. Especializado en arquitecturas RESTful y microservicios.
+                    </p>
+                    <p class="description">
+                        Mi pasión es crear soluciones tecnológicas eficientes y seguras, aplicando las mejores prácticas de desarrollo para mantener código limpio y mantenible.
+                    </p>
+                    <div class="expertise">
+                        <div class="expertise-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Frontend</h4>
+                                <p>Angular, React, Vue.js</p>
+                            </div>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-server"></i>
+                            <div>
+                                <h4>Backend</h4>
+                                <p>Java, C#, Node.js, Python</p>
+                            </div>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-database"></i>
+                            <div>
+                                <h4>Bases de Datos</h4>
+                                <p>MySQL, PostgreSQL, MongoDB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="skills" id="Skills">
@@ -106,27 +188,109 @@
         </div>
     </section>
     <section class="projects" id="Projects">
-        <h2>Projects</h2>
         <div class="container">
-            <div class="project">
-                <h4><span>Model House</span></h4>
-                <i class="fa-regular fa-envelope"></i>
-                <h5><a href="https://github.com/Model-House/ModelHouse_Backend">https://github.com/Model-House/ModelHouse_Backend</a></h5>
+            <div class="section-header">
+                <span class="section-tag">Portafolio</span>
+                <h2 class="section-title">Proyectos <span>Destacados</span></h2>
+                <p class="section-description">Algunos de mis trabajos más recientes y desafiantes</p>
             </div>
-            <div class="project">
-                <h4><span>Model House Backend</span></h4>
-                <h5><a href="https://model-house.azurewebsites.net">https://model-house.azurewebsites.net</a></h5>
-                <h5><a href="https://github.com/Model-House/ModelHouse_Backend">https://github.com/Model-House/ModelHouse_Backend</a></h5>
-            </div>
-            <div class="project">
-                <h4><span>Remodel King Backend</span></h4>
-                <h5><a href="https://remodelking.azurewebsites.net">https://remodelking.azurewebsites.net</a></h5>
-                <h5><a href="https://github.com/RemodelKing/RemodelKing-BackEnd">https://github.com/RemodelKing/RemodelKing-BackEnd</a></h5>
-            </div>
-            <div class="project">
-                <h4><span>Model Virtual</span></h4>
-                <h5><a href="https://model-virtual.web.app">https://model-virtual.web.app</a></h5>
-                <h5><a href="https://github.com/ModelVirtual/ModelVirtual--FrontEnd">https://github.com/ModelVirtual/ModelVirtual--FrontEnd</a></h5>
+            <div class="projects-grid">
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://model-house.azurewebsites.net" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Model-House/ModelHouse_Backend" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">.NET</span>
+                            <span class="tag">Azure</span>
+                        </div>
+                        <h3>Model House</h3>
+                        <p>Sistema empresarial para visualización y gestión de documentos electrónicos con facturación integrada según estándares de SUNAT.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://remodelking.azurewebsites.net" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/RemodelKing/RemodelKing-BackEnd" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <h3>Remodel King</h3>
+                        <p>Plataforma de gestión integral para empresas comerciales con módulos de ventas, pagos y operaciones transaccionales.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://model-virtual.web.app" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/ModelVirtual/ModelVirtual--FrontEnd" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">.NET</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <h3>Model Virtual</h3>
+                        <p>Red social corporativa integrada con gestión de empleados y plataformas de comunicación interna para empresas.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/DiegoPorta20" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">Nest.js</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <h3>+Bienestar</h3>
+                        <p>Sistema de reservas médicas con gestión de citas, historias clínicas y métodos de pago integrados (Yape, efectivo, tarjeta).</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -160,8 +324,19 @@
         </div>
     </section>
     <footer>
-        <h2>Copyright © Diego Porta. Made wtih <i class="fas fa-heart"></i> for you</h2>
+        <div class="footer-content">
+            <p>© 2026 Diego Porta. Hecho con <i class="fas fa-heart"></i> y mucho <i class="fas fa-mug-hot"></i></p>
+            <div class="footer-links">
+                <a href="#Home">Inicio</a>
+                <a href="#About">Sobre mí</a>
+                <a href="#Projects">Proyectos</a>
+                <a href="#Contact">Contacto</a>
+            </div>
+        </div>
     </footer>
+    
     <script src="head_click.js"></script>
+    <script src="3d-background.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>
